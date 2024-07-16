@@ -37,7 +37,7 @@ This will create a `MessageSource` bean, by auto scanning the files under the `s
 
 ## Requirement
 
-- jdk 1.8+
+- jdk 17+
 
 ## License
 

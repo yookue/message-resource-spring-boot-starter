@@ -1,7 +1,0 @@
-# Message Resource for Spring Boot Starter
-# Copyright (c) 2021 Yookue Ltd. All rights reserved.
-# https://yookue.com
-
-org.springframework.boot.autoconfigure.EnableAutoConfiguration =\
-    com.yookue.springstarter.messageresource.config.MessageResourceAutoConfiguration,\
-    com.yookue.springstarter.messageresource.config.MessageResourceBeanConfiguration

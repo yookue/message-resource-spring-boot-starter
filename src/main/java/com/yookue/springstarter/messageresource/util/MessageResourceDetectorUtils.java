@@ -20,7 +20,7 @@ package com.yookue.springstarter.messageresource.util;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import javax.annotation.Nullable;
+import jakarta.annotation.Nullable;
 import org.springframework.util.CollectionUtils;
 import com.yookue.commonplexus.javaseutil.constant.CharVariantConst;
 import com.yookue.commonplexus.javaseutil.constant.StringVariantConst;

@@ -17,8 +17,8 @@
 package com.yookue.springstarter.messageresource.config;
 
 
-import javax.annotation.Nonnull;
-import javax.validation.Validator;
+import jakarta.annotation.Nonnull;
+import jakarta.validation.Validator;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
