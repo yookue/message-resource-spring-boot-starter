@@ -26,8 +26,8 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -59,7 +59,7 @@ import com.yookue.springstarter.messageresource.util.MessageResourceDetectorUtil
  * @see org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration
  */
 @Configuration(proxyBeanMethods = false)
-@ConditionalOnProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX, name = "enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnBooleanProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX, name = "enabled", matchIfMissing = true)
 @AutoConfigureBefore(value = MessageSourceAutoConfiguration.class)
 @AutoConfigureOrder(value = Ordered.HIGHEST_PRECEDENCE)
 @EnableConfigurationProperties(value = MessageResourceProperties.class)
@@ -93,7 +93,7 @@ public class MessageResourceAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = PROPERTIES_PREFIX + ".message-resource", name = "primary-message-resource", havingValue = "true", matchIfMissing = true)
+    @ConditionalOnBooleanProperty(prefix = PROPERTIES_PREFIX + ".message-resource", name = "primary-message-resource", matchIfMissing = true)
     @ConditionalOnMissingBean
     public MessageResourcePriorityProcessor messageSourcePriorityProcessor(@Nonnull MessageResourceProperties properties) {
         MessageResourcePriorityProcessor result = new MessageResourcePriorityProcessor();
@@ -102,7 +102,7 @@ public class MessageResourceAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = PROPERTIES_PREFIX + ".accessor-aware", name = "enabled", havingValue = "true", matchIfMissing = true)
+    @ConditionalOnBooleanProperty(prefix = PROPERTIES_PREFIX + ".accessor-aware", name = "enabled", matchIfMissing = true)
     @ConditionalOnMissingBean
     public MessageSourceAccessorProcessor messageSourceAccessorProcessor(@Nonnull ConfigurableApplicationContext context, @Nonnull MessageResourceProperties properties) {
         MessageSourceAccessorProcessor result = new MessageSourceAccessorProcessor(context, properties.getDefaultLocale());

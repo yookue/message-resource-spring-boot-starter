@@ -21,9 +21,9 @@ import jakarta.annotation.Nonnull;
 import jakarta.validation.Validator;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration;
 import org.springframework.context.MessageSource;
@@ -41,26 +41,26 @@ import com.yookue.commonplexus.springutil.message.RestResponseMessenger;
  * @author David Hsing
  */
 @Configuration(proxyBeanMethods = false)
-@ConditionalOnProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX, name = "enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnBooleanProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX, name = "enabled", matchIfMissing = true)
 @AutoConfigureAfter(value = {MessageSourceAutoConfiguration.class, ValidationAutoConfiguration.class, MessageSourceAutoConfiguration.class})
 public class MessageResourceBeanConfiguration {
     @Bean
     @ConditionalOnClass(value = Validator.class)
-    @ConditionalOnProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX + ".extra-messenger", name = "bean-validation", havingValue = "true", matchIfMissing = true)
+    @ConditionalOnBooleanProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX + ".extra-messenger", name = "bean-validation", matchIfMissing = true)
     @ConditionalOnMissingBean
     public BeanValidationMessenger beanValidationMessenger(@Nonnull @Qualifier(value = MessageResourceAutoConfiguration.MESSAGE_SOURCE) MessageSource source, @Nonnull @Lazy Validator validator) {
         return new BeanValidationMessenger(source, validator);
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX + ".extra-messenger", name = "form-validation", havingValue = "true", matchIfMissing = true)
+    @ConditionalOnBooleanProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX + ".extra-messenger", name = "form-validation", matchIfMissing = true)
     @ConditionalOnMissingBean
     public FormValidationMessenger formValidationMessenger(@Nonnull @Qualifier(value = MessageResourceAutoConfiguration.MESSAGE_SOURCE) MessageSource source) {
         return new FormValidationMessenger(source);
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX + ".extra-messenger", name = "rest-response", havingValue = "true", matchIfMissing = true)
+    @ConditionalOnBooleanProperty(prefix = MessageResourceAutoConfiguration.PROPERTIES_PREFIX + ".extra-messenger", name = "rest-response", matchIfMissing = true)
     @ConditionalOnMissingBean
     public RestResponseMessenger restResponseMessenger(@Nonnull @Qualifier(value = MessageResourceAutoConfiguration.MESSAGE_SOURCE) MessageSource source, @Nonnull @Lazy Validator validator) {
         return new RestResponseMessenger(source, validator);
