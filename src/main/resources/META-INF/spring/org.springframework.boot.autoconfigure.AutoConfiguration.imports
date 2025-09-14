@@ -1,6 +1,6 @@
 # Message Resource for Spring Boot Starter
-# Copyright (c) 2021 Yookue Ltd. All rights reserved.
-# https://yookue.com
+# Copyright (c) 2021 Unikue Ltd. All rights reserved.
+# https://unikue.cn
 
-com.yookue.springstarter.messageresource.config.MessageResourceAutoConfiguration
-com.yookue.springstarter.messageresource.config.MessageResourceBeanConfiguration
+cn.unikue.springstarter.messageresource.config.MessageResourceAutoConfiguration
+cn.unikue.springstarter.messageresource.config.MessageResourceBeanConfiguration

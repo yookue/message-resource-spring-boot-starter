@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2016 Unikue Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yookue.springstarter.messageresource.config;
+package cn.unikue.springstarter.messageresource.config;
 
 
 import java.util.Optional;
@@ -40,16 +40,16 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.Environment;
 import org.springframework.util.CollectionUtils;
-import com.yookue.commonplexus.javaseutil.constant.CharVariantConst;
-import com.yookue.commonplexus.javaseutil.util.CollectionPlainWraps;
-import com.yookue.commonplexus.javaseutil.util.DurationUtilsWraps;
-import com.yookue.commonplexus.javaseutil.util.StringUtilsWraps;
-import com.yookue.commonplexus.springutil.constant.SpringPropertyConst;
-import com.yookue.commonplexus.springutil.processor.MessageSourceAccessorProcessor;
-import com.yookue.commonplexus.springutil.util.ResourceUtilsWraps;
-import com.yookue.springstarter.messageresource.processor.MessageResourcePriorityProcessor;
-import com.yookue.springstarter.messageresource.property.MessageResourceProperties;
-import com.yookue.springstarter.messageresource.util.MessageResourceDetectorUtils;
+import cn.unikue.commonplexus.javaseutil.constant.CharVariantConst;
+import cn.unikue.commonplexus.javaseutil.util.CollectionPlainWraps;
+import cn.unikue.commonplexus.javaseutil.util.DurationUtilsWraps;
+import cn.unikue.commonplexus.javaseutil.util.StringUtilsWraps;
+import cn.unikue.commonplexus.springutil.constant.SpringPropertyConst;
+import cn.unikue.commonplexus.springutil.processor.MessageSourceAccessorProcessor;
+import cn.unikue.commonplexus.springutil.util.ResourceUtilsWraps;
+import cn.unikue.springstarter.messageresource.processor.MessageResourcePriorityProcessor;
+import cn.unikue.springstarter.messageresource.property.MessageResourceProperties;
+import cn.unikue.springstarter.messageresource.util.MessageResourceDetectorUtils;
 
 
 /**

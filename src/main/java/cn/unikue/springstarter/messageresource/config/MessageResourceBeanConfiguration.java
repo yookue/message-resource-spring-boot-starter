@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2016 Unikue Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yookue.springstarter.messageresource.config;
+package cn.unikue.springstarter.messageresource.config;
 
 
 import jakarta.annotation.Nonnull;
@@ -30,9 +30,9 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
-import com.yookue.commonplexus.springutil.message.BeanValidationMessenger;
-import com.yookue.commonplexus.springutil.message.FormValidationMessenger;
-import com.yookue.commonplexus.springutil.message.RestResponseMessenger;
+import cn.unikue.commonplexus.springutil.message.BeanValidationMessenger;
+import cn.unikue.commonplexus.springutil.message.FormValidationMessenger;
+import cn.unikue.commonplexus.springutil.message.RestResponseMessenger;
 
 
 /**

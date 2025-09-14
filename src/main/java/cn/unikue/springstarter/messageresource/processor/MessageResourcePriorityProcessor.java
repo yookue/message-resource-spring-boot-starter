@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2021 Unikue Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yookue.springstarter.messageresource.processor;
+package cn.unikue.springstarter.messageresource.processor;
 
 
 import jakarta.annotation.Nonnull;
@@ -23,7 +23,7 @@ import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.core.Ordered;
-import com.yookue.springstarter.messageresource.config.MessageResourceAutoConfiguration;
+import cn.unikue.springstarter.messageresource.config.MessageResourceAutoConfiguration;
 import lombok.Getter;
 import lombok.Setter;
 

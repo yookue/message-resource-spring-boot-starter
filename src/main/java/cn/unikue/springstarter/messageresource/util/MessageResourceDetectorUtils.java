@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2021 Unikue Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yookue.springstarter.messageresource.util;
+package cn.unikue.springstarter.messageresource.util;
 
 
 import java.util.LinkedHashSet;
@@ -22,13 +22,13 @@ import java.util.List;
 import java.util.Set;
 import jakarta.annotation.Nullable;
 import org.springframework.util.CollectionUtils;
-import com.yookue.commonplexus.javaseutil.constant.CharVariantConst;
-import com.yookue.commonplexus.javaseutil.constant.StringVariantConst;
-import com.yookue.commonplexus.javaseutil.util.ArrayUtilsWraps;
-import com.yookue.commonplexus.javaseutil.util.CollectionPlainWraps;
-import com.yookue.commonplexus.javaseutil.util.RegexUtilsWraps;
-import com.yookue.commonplexus.javaseutil.util.StringUtilsWraps;
-import com.yookue.commonplexus.springutil.util.ClassUtilsWraps;
+import cn.unikue.commonplexus.javaseutil.constant.CharVariantConst;
+import cn.unikue.commonplexus.javaseutil.constant.StringVariantConst;
+import cn.unikue.commonplexus.javaseutil.util.ArrayUtilsWraps;
+import cn.unikue.commonplexus.javaseutil.util.CollectionPlainWraps;
+import cn.unikue.commonplexus.javaseutil.util.RegexUtilsWraps;
+import cn.unikue.commonplexus.javaseutil.util.StringUtilsWraps;
+import cn.unikue.commonplexus.springutil.util.ClassUtilsWraps;
 import io.github.classgraph.ClassGraph;
 import io.github.classgraph.ScanResult;
 
